@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 🎨 Zardo UI Library
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The **Zardo UI Library** is a collection of reusable styles and components designed to meet the design needs of our agency. Built with **React**, **TypeScript**, and **Vite**, our library is optimized for performance and developer experience.
 
-Currently, two official plugins are available:
+## 🚀 Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get started with the Zardo UI Library, follow these simple steps:
 
-## Expanding the ESLint configuration
+1. **Install the Library**:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+   ```bash
+   yarn add @zardo/ui-kit
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. **Import Components**:
+   Import the components you need in your project:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+   ```javascript
+   import { Button, Input } from "@zardo/ui-kit";
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3. **Use the Components**:
+   Utilize the components in your application:
+   ```jsx
+   const App = () => (
+     <div>
+       <Input placeholder="Enter your email" type="email" />
+       <Button variant="solid" size="md">
+         Submit
+       </Button>
+     </div>
+   );
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🌟 Features
+
+- **Customizable Components**: Easily adjustable styles and behaviors to meet our design needs.
+- **Responsive Design**: All components are built with a focus on responsiveness, ensuring a great user experience on any device.
+- **TypeScript Support**: Enjoy type safety and autocompletion with TypeScript.
+- **Lightweight and Fast**: Built with Vite for rapid development and optimized performance.
+
+## 🎨 Components
+
+Here's an overview of the components available in the Zardo UI Library:
+
+- **Button**: A versatile button component with various styles and sizes.
+- **Input**: A customizable input field for capturing user data.
+
+## 📚 Documentation
+
+For detailed documentation on each component, including usage examples and API references, visit our [Documentation](https://your-library-docs.com).
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🌐 Connect with Us
+
+Stay updated and connect with us on:
+
+- [GitHub](https://github.com/ericzardo)
+- [LinkedIn](https://www.linkedin.com/in/eric-zardo-a53630228/)
+
+---
+
+Thank you for using the Zardo UI Library! We hope it helps you create amazing applications with ease. Happy coding! 🎉
