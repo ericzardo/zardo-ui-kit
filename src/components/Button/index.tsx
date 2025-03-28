@@ -25,7 +25,7 @@ const buttonStyles = cva(
           "bg-gradient-to-r from-brand-purple to-brand-purpleDark text-white shadow-md",
         outline:
           "bg-transparent border border-brand-purple text-brand-purple hover:bg-brand-purple/10 shadow-md",
-        ghost: "bg-transparent text-brand-navy hover:bg-brand-navy/10",
+        ghost: "bg-transparent text-brand-purple hover:bg-brand-navy/10",
       },
       size: {
         sm: "text-sm px-4 py-2",
