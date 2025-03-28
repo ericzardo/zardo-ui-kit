@@ -1,6 +1,6 @@
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
-import { ComponentProps } from "react";
+import { ComponentProps, forwardRef } from "react";
 
 const buttonStyles = cva(
   [
@@ -23,8 +23,9 @@ const buttonStyles = cva(
       variant: {
         solid:
           "bg-gradient-to-r from-brand-purple to-brand-purpleDark text-white shadow-md",
-        transparent:
+        outline:
           "bg-transparent border border-brand-purple text-brand-purple hover:bg-brand-purple/10 shadow-md",
+        ghost: "bg-transparent text-brand-navy hover:bg-brand-navy/10",
       },
       size: {
         sm: "text-sm px-4 py-2",
@@ -38,7 +39,11 @@ const buttonStyles = cva(
         size: "sm",
       },
       {
-        variant: "transparent",
+        variant: "outline",
+        size: "sm",
+      },
+      {
+        variant: "ghost",
         size: "sm",
       },
       {
@@ -46,7 +51,11 @@ const buttonStyles = cva(
         size: "md",
       },
       {
-        variant: "transparent",
+        variant: "outline",
+        size: "md",
+      },
+      {
+        variant: "ghost",
         size: "md",
       },
       {
@@ -54,7 +63,11 @@ const buttonStyles = cva(
         size: "lg",
       },
       {
-        variant: "transparent",
+        variant: "outline",
+        size: "lg",
+      },
+      {
+        variant: "ghost",
         size: "lg",
       },
     ],
@@ -67,13 +80,16 @@ const buttonStyles = cva(
 
 type ButtonProps = ComponentProps<"button"> & VariantProps<typeof buttonStyles>;
 
-export const Button = ({ variant, size, className, ...props }: ButtonProps) => {
-  return (
-    <button
-      className={cn(buttonStyles({ variant, size, className }))}
-      {...props}
-    />
-  );
-};
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ variant, size, className, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        className={cn(buttonStyles({ variant, size, className }))}
+        {...props}
+      />
+    );
+  }
+);
 
 export default Button;
