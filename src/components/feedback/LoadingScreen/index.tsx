@@ -4,9 +4,7 @@ type LoadingScreenProps = {
   message?: string;
 };
 
-export const LoadingScreen = ({
-  message = "Loading...",
-}: LoadingScreenProps) => {
+const LoadingScreen = ({ message = "Loading..." }: LoadingScreenProps) => {
   const [, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -36,3 +34,5 @@ export const LoadingScreen = ({
     </div>
   );
 };
+
+export default LoadingScreen;

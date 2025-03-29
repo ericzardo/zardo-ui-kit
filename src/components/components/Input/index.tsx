@@ -116,6 +116,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           className={cn(inputStyles({ variant, size, error }), className)}
           aria-invalid={error ? "true" : "false"}
           aria-describedby={error ? `${message}-error` : undefined}
+          autoComplete="off"
           {...props}
         />
         {error && message && (

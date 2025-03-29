@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/Button";
+import Button from "@/components/components/Button";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -18,7 +18,7 @@ interface HeaderProps {
   className?: string;
 }
 
-export const Header = ({
+const Header = ({
   logo = "zardo",
   navItems = [],
   ctaLabel = "Get Started",
@@ -119,3 +119,5 @@ export const Header = ({
     </header>
   );
 };
+
+export default Header;

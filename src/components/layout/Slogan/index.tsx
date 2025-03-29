@@ -1,4 +1,4 @@
-import SectionTransition from "@/animations/SectionTransition";
+import SectionTransition from "@/components/animations/SectionTransition";
 import { cn } from "@/utils";
 import { cva, VariantProps } from "class-variance-authority";
 
@@ -33,7 +33,7 @@ type SloganProps = {
   borderRadius?: VariantProps<typeof sloganStyles>["borderRadius"];
 };
 
-export const Slogan = ({
+const Slogan = ({
   title,
   description,
   transitionDirection = "up",

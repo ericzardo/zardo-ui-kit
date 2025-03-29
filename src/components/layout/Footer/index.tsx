@@ -13,7 +13,7 @@ type FooterProps = {
   socialLinks: SocialLink[];
 };
 
-export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
+const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
   return (
     <footer className="relative py-12 bg-brand-navy text-white">
       <div className="container mx-auto px-4">
@@ -62,3 +62,5 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
     </footer>
   );
 };
+
+export default Footer;
