@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { LoadingScreen } from ".";
+import LoadingScreen from ".";
 
 const meta: Meta<typeof LoadingScreen> = {
   title: "Feedback/LoadingScreen",

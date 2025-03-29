@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Instagram, Linkedin } from "lucide-react";
-import { Footer } from ".";
+import Footer from ".";
 
 const meta: Meta<typeof Footer> = {
   title: "Layout/Footer",

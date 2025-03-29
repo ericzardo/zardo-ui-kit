@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Slogan } from ".";
+import Slogan from ".";
 
 const meta: Meta<typeof Slogan> = {
   title: "Layout/Slogan",
