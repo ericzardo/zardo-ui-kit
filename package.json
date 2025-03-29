@@ -1,12 +1,10 @@
 {
   "name": "@zardo/ui-kit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/ui-kit.cjs.js",
   "module": "dist/ui-kit.es.js",
-  "files": [
-    "dist"
-  ],
+  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/ui-kit.es.js",
@@ -16,7 +14,9 @@
       "import": "./dist/styles.css"
     }
   },
-  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
