@@ -12,14 +12,21 @@ To get started with the Zardo UI Library, follow these simple steps:
    yarn add @zardo/ui-kit
    ```
 
-2. **Import Components**:
+2. **Import Styles**:
+   Import the global styles in your main entry file:
+
+   ```javascript
+   import "@zardo/ui-kit/styles.css";
+   ```
+
+3. **Import Components**:
    Import the components you need in your project:
 
    ```javascript
    import { Button, Input } from "@zardo/ui-kit";
    ```
 
-3. **Use the Components**:
+4. **Use the Components**:
    Utilize the components in your application:
    ```jsx
    const App = () => (
@@ -32,35 +39,35 @@ To get started with the Zardo UI Library, follow these simple steps:
    );
    ```
 
-## 🌟 Features
-
-- **Customizable Components**: Easily adjustable styles and behaviors to meet our design needs.
-- **Responsive Design**: All components are built with a focus on responsiveness, ensuring a great user experience on any device.
-- **TypeScript Support**: Enjoy type safety and autocompletion with TypeScript.
-- **Lightweight and Fast**: Built with Vite for rapid development and optimized performance.
-
 ## 🎨 Components
 
 Here's an overview of the components available in the Zardo UI Library:
 
+### Basic Components
+
 - **Button**: A versatile button component with various styles and sizes.
 - **Input**: A customizable input field for capturing user data.
 
+### Layout Components
+
+- **Header**: A component for the top navigation or branding.
+- **Footer**: A component for the bottom of your application.
+- **Slogan**: A component for displaying catchy phrases or taglines.
+
+### Transition Components
+
+- **Section Transition**: A component for smooth transitions between sections.
+- **Loading Screen**: A component to indicate loading states in your application.
+
 ## 📚 Documentation
 
-For detailed documentation on each component, including usage examples and API references, visit our [Documentation](https://your-library-docs.com).
+For detailed documentation on each component, including usage examples and API references, visit our [Documentation](https://www.npmjs.com/package/@zardo/ui-kit).
 
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 🌐 Connect with Us
-
-Stay updated and connect with us on:
+## 👤 Author
 
 - [GitHub](https://github.com/ericzardo)
 - [LinkedIn](https://www.linkedin.com/in/eric-zardo-a53630228/)
-
----
-
-Thank you for using the Zardo UI Library! We hope it helps you create amazing applications with ease. Happy coding! 🎉
