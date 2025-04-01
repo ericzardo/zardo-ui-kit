@@ -1,12 +1,13 @@
 import { SectionTransition } from "@/components/animations/SectionTransition";
 import { cn } from "@/utils";
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 
 const sloganStyles = cva(
   [
     "relative",
     "py-12",
     "md:py-16",
+    "w-full",
     "flex",
     "items-center",
     "bg-brand-navy",
@@ -30,7 +31,7 @@ type SloganProps = {
   title: string;
   description: string;
   transitionDirection?: "up" | "down" | "left" | "right";
-  borderRadius?: VariantProps<typeof sloganStyles>["borderRadius"];
+  borderRadius?: "top" | "bottom" | "none";
 };
 
 export const Slogan = ({

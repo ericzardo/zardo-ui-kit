@@ -1,5 +1,5 @@
 import { cn } from "@/utils";
-import { cva, VariantProps } from "class-variance-authority";
+import { cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 
 const inputStyles = cva(
@@ -102,10 +102,12 @@ const messageStyles = cva("font-medium", {
   },
 });
 
-type InputProps = ComponentProps<"input"> &
-  VariantProps<typeof inputStyles> & {
-    message?: string;
-  };
+type InputProps = ComponentProps<"input"> & {
+  variant?: "solid" | "glass";
+  size?: "sm" | "md" | "lg";
+  error?: boolean;
+  message?: string;
+};
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ variant, size, error, message, className, ...props }, ref) => {

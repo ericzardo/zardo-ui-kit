@@ -15,7 +15,7 @@ type FooterProps = {
 
 export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
   return (
-    <footer className="relative py-12 bg-brand-navy text-white">
+    <footer className="relative py-12 bg-brand-navy text-white w-full">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row gap-5 justify-between items-center">
           {/* Social Links */}
@@ -26,7 +26,7 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
+                className="flex items-center justify-center text-white/60 hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
                 aria-label={socialLink.label}
               >
                 {socialLink.icon}
@@ -37,7 +37,7 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
               href={`mailto:${email}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
+              className="flex items-center justify-center text-white/60 hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
               aria-label={`Send an email to ${email}`}
               title={`Send email to ${email}`}
             >
