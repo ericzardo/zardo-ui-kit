@@ -8,7 +8,8 @@
   "exports": {
     ".": {
       "import": "./dist/ui.es.js",
-      "require": "./dist/ui.umd.js"
+      "require": "./dist/ui.umd.js",
+      "types": "./dist/index.d.ts"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
