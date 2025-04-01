@@ -45,19 +45,34 @@ Here's an overview of the components available in the Zardo UI Library:
 
 ### Basic Components
 
+<details>
+<summary>Click to expand</summary>
+
 - **Button**: A versatile button component with various styles and sizes.
 - **Input**: A customizable input field for capturing user data.
 
+</details>
+
 ### Layout Components
+
+<details>
+<summary>Click to expand</summary>
 
 - **Header**: A component for the top navigation or branding.
 - **Footer**: A component for the bottom of your application.
 - **Slogan**: A component for displaying catchy phrases or taglines.
 
+</details>
+
 ### Transition Components
+
+<details>
+<summary>Click to expand</summary>
 
 - **Section Transition**: A component for smooth transitions between sections.
 - **Loading Screen**: A component to indicate loading states in your application.
+
+</details>
 
 ## 📚 Documentation
 

@@ -1,6 +1,28 @@
 {
   "name": "@zardo/ui-kit",
   "version": "1.0.5",
+  "author": {
+    "name": "Eric Zardo",
+    "email": "ericzardo@gmail.com",
+    "url": "https://github.com/ericzardo"
+  },
+  "description": "A collection of reusable styles and components for React applications.",
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "library",
+    "typescript",
+    "vite"
+  ],
+  "homepage": "https://www.npmjs.com/package/@zardo/ui-kit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericzardo/zardo-ui-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericzardo/zardo-ui-kit/issues"
+  },
   "type": "module",
   "types": "dist/index.d.ts",
   "main": "dist/ui.cjs.js",
