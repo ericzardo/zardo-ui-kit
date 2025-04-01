@@ -1,0 +1,83 @@
+{
+  "name": "@zardo/ui-kit",
+  "version": "0.0.1",
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "main": "dist/ui.cjs.js",
+  "module": "dist/ui.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui.es.js",
+      "require": "./dist/ui.umd.js"
+    },
+    "./styles.css": {
+      "require": "./dist/styles.css",
+      "default": "./dist/styles.css"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build && npm run build:css",
+    "build:css": "npx @tailwindcss/cli -m -i ./src/globals.css -o ./dist/styles.css",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "storybook": "concurrently 'npm run storybook:css' 'storybook dev -p 3333'",
+    "storybook:css": "npx @tailwindcss/cli -w -i ./src/globals.css -o ./src/globals.css",
+    "build-storybook": "concurrently 'npm run build-storybook:css' 'storybook build'",
+    "build-storybook:css": "npx @tailwindcss/cli -m -i ./src/globals.css -o ./src/globals.css",
+    "prepublishOnly": "npm run build",
+    "prebuild": "rm -rf dist tsconfig.tsbuildinfo tsconfig.node.tsbuildinfo vite.config.js"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^3",
+    "@eslint/js": "^9.21.0",
+    "@storybook/addon-essentials": "^8.6.11",
+    "@storybook/addon-onboarding": "^8.6.11",
+    "@storybook/blocks": "^8.6.11",
+    "@storybook/experimental-addon-test": "^8.6.11",
+    "@storybook/react": "^8.6.11",
+    "@storybook/react-vite": "^8.6.11",
+    "@storybook/test": "^8.6.11",
+    "@tailwindcss/cli": "^4.1.0",
+    "@types/node": "^22.13.14",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/browser": "^3.0.9",
+    "@vitest/coverage-v8": "^3.0.9",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "concurrently": "^9.1.2",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-storybook": "^0.12.0",
+    "globals": "^15.15.0",
+    "lucide-react": "^0.486.0",
+    "playwright": "^1.51.1",
+    "storybook": "^8.6.11",
+    "tailwind-merge": "^3.1.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0",
+    "vite-plugin-dts": "^4.5.3",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.9"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:storybook/recommended"
+    ]
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}
