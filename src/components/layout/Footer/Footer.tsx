@@ -17,7 +17,7 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
   return (
     <footer className="relative py-12 bg-brand-navy text-white w-full">
       <div className="container mx-auto px-4">
-        <div className="md:flex-row flex flex-col gap-5 justify-between items-center">
+        <div className="flex md:flex-row flex-col gap-5 justify-between items-center">
           {/* Social Links */}
           <div className="flex items-center gap-4">
             {socialLinks.map((socialLink, index) => (
