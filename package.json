@@ -29,64 +29,29 @@
   "module": "dist/ui.es.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/ui.es.js",
-      "require": "./dist/ui.cjs.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./components": {
-      "import": "./dist/components/index.es.js",
-      "require": "./dist/components/index.cjs.js",
-      "types": "./dist/components/index.d.ts"
-    },
-    "./animations": {
-      "import": "./dist/components/animations/index.es.js",
-      "require": "./dist/components/animations/index.cjs.js",
-      "types": "./dist/components/animations/index.d.ts"
-    },
-    "./animations/SectionTransition": {
-      "import": "./dist/components/animations/SectionTransition/SectionTransition.es.js",
-      "require": "./dist/components/animations/SectionTransition/SectionTransition.cjs.js",
-      "types": "./dist/components/animations/SectionTransition/SectionTransition.d.ts"
+      "require": "./dist/ui.cjs.js"
     },
     "./layout": {
-      "import": "./dist/components/layout/index.es.js",
-      "require": "./dist/components/layout/index.cjs.js",
-      "types": "./dist/components/layout/index.d.ts"
+      "types": "./dist/layout.d.ts",
+      "import": "./dist/layout.es.js",
+      "require": "./dist/layout.cjs.js"
     },
-    "./layout/Header": {
-      "import": "./dist/components/layout/Header/Header.es.js",
-      "require": "./dist/components/layout/Header/Header.cjs.js",
-      "types": "./dist/components/layout/Header/Header.d.ts"
-    },
-    "./layout/Footer": {
-      "import": "./dist/components/layout/Footer/Footer.es.js",
-      "require": "./dist/components/layout/Footer/Footer.cjs.js",
-      "types": "./dist/components/layout/Footer/Footer.d.ts"
-    },
-    "./layout/Slogan": {
-      "import": "./dist/components/layout/Slogan/Slogan.es.js",
-      "require": "./dist/components/layout/Slogan/Slogan.cjs.js",
-      "types": "./dist/components/layout/Slogan/Slogan.d.ts"
+    "./components": {
+      "types": "./dist/components.d.ts",
+      "import": "./dist/components.es.js",
+      "require": "./dist/components.cjs.js"
     },
     "./feedback": {
-      "import": "./dist/components/feedback/index.es.js",
-      "require": "./dist/components/feedback/index.cjs.js",
-      "types": "./dist/components/feedback/index.d.ts"
+      "types": "./dist/feedback.d.ts",
+      "import": "./dist/feedback.es.js",
+      "require": "./dist/feedback.cjs.js"
     },
-    "./feedback/LoadingScreen": {
-      "import": "./dist/components/feedback/LoadingScreen/LoadingScreen.es.js",
-      "require": "./dist/components/feedback/LoadingScreen/LoadingScreen.cjs.js",
-      "types": "./dist/components/feedback/LoadingScreen/LoadingScreen.d.ts"
-    },
-    "./Button": {
-      "import": "./dist/components/components/Button/Button.es.js",
-      "require": "./dist/components/components/Button/Button.cjs.js",
-      "types": "./dist/components/components/Button/Button.d.ts"
-    },
-    "./Input": {
-      "import": "./dist/components/components/Input/Input.es.js",
-      "require": "./dist/components/components/Input/Input.cjs.js",
-      "types": "./dist/components/components/Input/Input.d.ts"
+    "./animations": {
+      "types": "./dist/animations.d.ts",
+      "import": "./dist/animations.es.js",
+      "require": "./dist/animations.cjs.js"
     },
     "./styles.css": {
       "require": "./dist/styles.css",

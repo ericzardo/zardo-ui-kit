@@ -1,5 +1,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
 import { defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 import { viteStaticCopy } from "vite-plugin-static-copy";
@@ -29,8 +30,16 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: "./src/index.ts",
-      name: "ui",
+      entry: {
+        index: path.resolve(__dirname, "src/index.ts"),
+        components: path.resolve(__dirname, "src/components/index.ts"),
+        animations: path.resolve(
+          __dirname,
+          "src/components/animations/index.ts"
+        ),
+        layout: path.resolve(__dirname, "src/components/layout/index.ts"),
+        feedback: path.resolve(__dirname, "src/components/feedback/index.ts"),
+      },
       fileName: (format, entry) => {
         if (entry === "index") {
           return `ui.${format}.js`;
@@ -40,11 +49,13 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: Object.keys(peerDependencies),
+      external: [...Object.keys(peerDependencies), "react/jsx-runtime"],
       output: {
-        preserveModules: true,
-        preserveModulesRoot: "src",
-        globals: { react: "React", "react-dom": "ReactDOM" },
+        globals: {
+          react: "React",
+          "react-dom": "ReactDOM",
+        },
+        manualChunks: () => "bundle",
         assetFileNames: (assetInfo) => {
           if (assetInfo.name?.endsWith(".css")) {
             return "styles.css";
