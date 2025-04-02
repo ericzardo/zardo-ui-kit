@@ -9,17 +9,16 @@
       "@/*": ["./src/*"]
     },
     "declaration": true,
+    "declarationDir": "./dist",
     "outDir": "./dist",
-    "declarationDir": "./dist/types",
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": false,
+    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
+    "noEmit": true,
     "jsx": "react-jsx",
-    "emitDeclarationOnly": true,
 
     /* Linting */
     "strict": true,
