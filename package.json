@@ -33,15 +33,28 @@
       "import": "./dist/ui.es.js",
       "require": "./dist/ui.umd.js"
     },
+    "./layout": {
+      "types": "./dist/components/layout/index.d.ts",
+      "import": "./dist/components/layout/index.js"
+    },
+    "./animations": {
+      "types": "./dist/components/animations/index.d.ts",
+      "import": "./dist/components/animations/index.js"
+    },
+    "./feedback": {
+      "types": "./dist/components/feedback/index.d.ts",
+      "import": "./dist/components/feedback/index.js"
+    },
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
     },
-    "./assets": {
-      "types": "./dist/assets/assets.d.ts",
-      "require": "./dist/assets/index.js",
-      "default": "./dist/assets/index.js"
-    }
+    "./apple-touch-icon": "./dist/assets/logos/apple-touch-icon.png",
+    "./favicon": "./dist/assets/logos/favicon.ico",
+    "./icon-192": "./dist/assets/logos/icon-192.png",
+    "./icon-32": "./dist/assets/logos/icon-32.png",
+    "./icon-512": "./dist/assets/logos/icon-512.png",
+    "./icon-600": "./dist/assets/logos/icon-600.png"
   },
   "files": [
     "dist"
