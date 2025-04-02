@@ -1,6 +1,7 @@
-export { default as AppleTouchIcon } from "./apple-touch-icon.png";
-export { default as Favicon } from "./favicon.ico";
-export { default as Logo192 } from "./icon-192.png";
-export { default as Logo32 } from "./icon-32.png";
-export { default as Logo512 } from "./icon-512.png";
-export { default as Logo600 } from "./icon-600.png";
+export const AppleTouchIcon = new URL("./apple-touch-icon.png", import.meta.url)
+  .href;
+export const Favicon = new URL("./favicon.ico", import.meta.url).href;
+export const Logo192 = new URL("./icon-192.png", import.meta.url).href;
+export const Logo32 = new URL("./icon-32.png", import.meta.url).href;
+export const Logo512 = new URL("./icon-512.png", import.meta.url).href;
+export const Logo600 = new URL("./icon-600.png", import.meta.url).href;

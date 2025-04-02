@@ -39,6 +39,7 @@ export default defineConfig({
         ),
         layout: path.resolve(__dirname, "src/components/layout/index.ts"),
         feedback: path.resolve(__dirname, "src/components/feedback/index.ts"),
+        logos: path.resolve(__dirname, "src/assets/logos/index.ts"),
       },
       fileName: (format, entry) => {
         if (entry === "index") {

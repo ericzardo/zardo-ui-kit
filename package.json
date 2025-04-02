@@ -56,6 +56,11 @@
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
+    },
+    "./logos": {
+      "types": "./dist/logos.d.ts",
+      "import": "./dist/logos.es.js",
+      "require": "./dist/logos.cjs.js"
     }
   },
   "files": [
