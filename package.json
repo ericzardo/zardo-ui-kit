@@ -29,32 +29,69 @@
   "module": "dist/ui.es.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
       "import": "./dist/ui.es.js",
-      "require": "./dist/ui.umd.js"
+      "require": "./dist/ui.cjs.js",
+      "types": "./dist/index.d.ts"
     },
-    "./layout": {
-      "types": "./dist/components/layout/index.d.ts",
-      "import": "./dist/components/layout/index.js"
+    "./components": {
+      "import": "./dist/components/index.es.js",
+      "require": "./dist/components/index.cjs.js",
+      "types": "./dist/components/index.d.ts"
     },
     "./animations": {
-      "types": "./dist/components/animations/index.d.ts",
-      "import": "./dist/components/animations/index.js"
+      "import": "./dist/components/animations/index.es.js",
+      "require": "./dist/components/animations/index.cjs.js",
+      "types": "./dist/components/animations/index.d.ts"
+    },
+    "./animations/SectionTransition": {
+      "import": "./dist/components/animations/SectionTransition/SectionTransition.es.js",
+      "require": "./dist/components/animations/SectionTransition/SectionTransition.cjs.js",
+      "types": "./dist/components/animations/SectionTransition/SectionTransition.d.ts"
+    },
+    "./layout": {
+      "import": "./dist/components/layout/index.es.js",
+      "require": "./dist/components/layout/index.cjs.js",
+      "types": "./dist/components/layout/index.d.ts"
+    },
+    "./layout/Header": {
+      "import": "./dist/components/layout/Header/Header.es.js",
+      "require": "./dist/components/layout/Header/Header.cjs.js",
+      "types": "./dist/components/layout/Header/Header.d.ts"
+    },
+    "./layout/Footer": {
+      "import": "./dist/components/layout/Footer/Footer.es.js",
+      "require": "./dist/components/layout/Footer/Footer.cjs.js",
+      "types": "./dist/components/layout/Footer/Footer.d.ts"
+    },
+    "./layout/Slogan": {
+      "import": "./dist/components/layout/Slogan/Slogan.es.js",
+      "require": "./dist/components/layout/Slogan/Slogan.cjs.js",
+      "types": "./dist/components/layout/Slogan/Slogan.d.ts"
     },
     "./feedback": {
-      "types": "./dist/components/feedback/index.d.ts",
-      "import": "./dist/components/feedback/index.js"
+      "import": "./dist/components/feedback/index.es.js",
+      "require": "./dist/components/feedback/index.cjs.js",
+      "types": "./dist/components/feedback/index.d.ts"
+    },
+    "./feedback/LoadingScreen": {
+      "import": "./dist/components/feedback/LoadingScreen/LoadingScreen.es.js",
+      "require": "./dist/components/feedback/LoadingScreen/LoadingScreen.cjs.js",
+      "types": "./dist/components/feedback/LoadingScreen/LoadingScreen.d.ts"
+    },
+    "./Button": {
+      "import": "./dist/components/components/Button/Button.es.js",
+      "require": "./dist/components/components/Button/Button.cjs.js",
+      "types": "./dist/components/components/Button/Button.d.ts"
+    },
+    "./Input": {
+      "import": "./dist/components/components/Input/Input.es.js",
+      "require": "./dist/components/components/Input/Input.cjs.js",
+      "types": "./dist/components/components/Input/Input.d.ts"
     },
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
-    },
-    "./apple-touch-icon": "./dist/assets/logos/apple-touch-icon.png",
-    "./favicon": "./dist/assets/logos/favicon.ico",
-    "./icon-192": "./dist/assets/logos/icon-192.png",
-    "./icon-32": "./dist/assets/logos/icon-32.png",
-    "./icon-512": "./dist/assets/logos/icon-512.png",
-    "./icon-600": "./dist/assets/logos/icon-600.png"
+    }
   },
   "files": [
     "dist"

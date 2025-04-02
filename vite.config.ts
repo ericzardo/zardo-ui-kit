@@ -31,12 +31,19 @@ export default defineConfig({
     lib: {
       entry: "./src/index.ts",
       name: "ui",
-      fileName: (format) => `ui.${format}.js`,
-      formats: ["es", "cjs", "umd"],
+      fileName: (format, entry) => {
+        if (entry === "index") {
+          return `ui.${format}.js`;
+        }
+        return `${entry}.${format}.js`;
+      },
+      formats: ["es", "cjs"],
     },
     rollupOptions: {
       external: Object.keys(peerDependencies),
       output: {
+        preserveModules: true,
+        preserveModulesRoot: "src",
         globals: { react: "React", "react-dom": "ReactDOM" },
         assetFileNames: (assetInfo) => {
           if (assetInfo.name?.endsWith(".css")) {
