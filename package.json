@@ -36,6 +36,11 @@
     "./styles.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
+    },
+    "./assets": {
+      "types": "./dist/assets/assets.d.ts",
+      "require": "./dist/assets/index.js",
+      "default": "./dist/assets/index.js"
     }
   },
   "files": [
@@ -91,6 +96,7 @@
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
     "vite-plugin-dts": "^4.5.3",
+    "vite-plugin-static-copy": "^2.3.0",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.0.9"
   },
