@@ -1,7 +1,6 @@
-export const AppleTouchIcon = new URL("./apple-touch-icon.png", import.meta.url)
-  .href;
-export const Favicon = new URL("./favicon.ico", import.meta.url).href;
-export const Logo192 = new URL("./icon-192.png", import.meta.url).href;
-export const Logo32 = new URL("./icon-32.png", import.meta.url).href;
-export const Logo512 = new URL("./icon-512.png", import.meta.url).href;
-export const Logo600 = new URL("./icon-600.png", import.meta.url).href;
+export const AppleTouchIcon = "/assets/logos/apple-touch-icon.png";
+export const Favicon = "/assets/logos/favicon.ico";
+export const Logo192 = "/assets/logos/icon-192.png";
+export const Logo32 = "/assets/logos/icon-32.png";
+export const Logo512 = "/assets/logos/icon-512.png";
+export const Logo600 = "/assets/logos/icon-600.png";
