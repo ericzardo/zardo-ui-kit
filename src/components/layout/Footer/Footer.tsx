@@ -46,7 +46,9 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
           </div>
 
           {/* Copyright */}
-          <p className="text-white/70">2025 © zardo. All rights reserved.</p>
+          <p className="absolute left-1/2 -translate-x-1/2 text-white/70">
+            2025 © zardo. All rights reserved.
+          </p>
 
           {/* Scroll to Top */}
           <button
