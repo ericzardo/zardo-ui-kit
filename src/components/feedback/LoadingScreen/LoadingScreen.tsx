@@ -2,25 +2,31 @@ import { forwardRef, useEffect, useState } from "react";
 
 type LoadingScreenProps = {
   message?: string;
-  doc?: Document;
 };
 
 export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
-  ({ message = "Loading...", doc = document }, ref) => {
-    const [, setIsLoading] = useState(true);
+  ({ message = "Loading..." }, ref) => {
+    const [isLoading, setIsLoading] = useState(true);
+    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-      const handleLoad = () => {
-        setIsLoading(false);
-      };
+      setIsClient(true);
+    }, []);
 
-      if (doc.readyState === "complete") {
+    useEffect(() => {
+      if (!isClient) return;
+
+      const handleLoad = () => setIsLoading(false);
+
+      if (window.document.readyState === "complete") {
         handleLoad();
       } else {
-        doc.addEventListener("load", handleLoad);
-        return () => doc.removeEventListener("load", handleLoad);
+        window.addEventListener("load", handleLoad);
+        return () => window.removeEventListener("load", handleLoad);
       }
-    }, [doc]);
+    }, [isClient]);
+
+    if (!isClient || !isLoading) return;
 
     return (
       <div
@@ -40,5 +46,3 @@ export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
     );
   }
 );
-
-LoadingScreen.displayName = "LoadingScreen";
