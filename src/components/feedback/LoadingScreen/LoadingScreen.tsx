@@ -7,26 +7,19 @@ type LoadingScreenProps = {
 export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
   ({ message = "Loading..." }, ref) => {
     const [isLoading, setIsLoading] = useState(true);
-    const [isClient, setIsClient] = useState(false);
 
     useEffect(() => {
-      setIsClient(true);
-    }, []);
-
-    useEffect(() => {
-      if (!isClient) return;
-
       const handleLoad = () => setIsLoading(false);
-
-      if (window.document.readyState === "complete") {
+  
+      if (document.readyState === "complete") {
         handleLoad();
       } else {
         window.addEventListener("load", handleLoad);
         return () => window.removeEventListener("load", handleLoad);
       }
-    }, [isClient]);
-
-    if (!isClient || !isLoading) return;
+    }, []);
+  
+    if (!isLoading) return null;
 
     return (
       <div
