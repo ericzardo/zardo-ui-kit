@@ -16,6 +16,7 @@ type Story = StoryObj<typeof LoadingScreen>;
 export const Desktop: Story = {
   args: {
     message: "Loading...",
+    forceLoading: true,
   },
   parameters: {
     viewport: {
@@ -27,6 +28,7 @@ export const Desktop: Story = {
 export const Mobile: Story = {
   args: {
     message: "Loading...",
+    forceLoading: true,
   },
   parameters: {
     viewport: {
