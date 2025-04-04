@@ -72,7 +72,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && yarn build:css",
+    "build:css": "npx @tailwindcss/cli -m -i ./src/styles/globals.css -o ./dist/styles/globals.css",
     "preview": "vite preview",
     "storybook": "storybook dev -p 3333",
     "build-storybook": "storybook build",
