@@ -46,7 +46,7 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
           </div>
 
           {/* Copyright */}
-          <p className="absolute left-1/2 -translate-x-1/2 text-white/70">
+          <p className="relative sm:absolute sm:left-1/2 sm:-translate-x-1/2 text-white/70">
             2025 © zardo. All rights reserved.
           </p>
 

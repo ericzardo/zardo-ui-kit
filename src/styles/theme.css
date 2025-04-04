@@ -1,0 +1,10 @@
+@theme {
+  --color-brand-offwhite: #f8f8ff;
+  --color-brand-lavender: #e6e6fa;
+  --color-brand-purple: #b14aed;
+  --color-brand-purpleDark: #620079;
+  --color-brand-purpleDeep: #300075;
+  --color-brand-navy: #0a122a;
+
+  --font-poppins: "Poppins", sans-serif;
+}

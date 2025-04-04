@@ -53,9 +53,9 @@
       "import": "./dist/animations.es.js",
       "require": "./dist/animations.cjs.js"
     },
-    "./styles.css": {
-      "require": "./dist/styles.css",
-      "default": "./dist/styles.css"
+    "./theme.css": {
+      "require": "./dist/styles/theme.css",
+      "default": "./dist/styles/theme.css"
     },
     "./logos": {
       "types": "./dist/logos.d.ts",
