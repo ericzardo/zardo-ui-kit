@@ -28,6 +28,10 @@ export default defineConfig({
         {
           src: "src/styles/theme.css",
           dest: "styles"
+        },
+        {
+          src: "src/styles/globals.css",
+          dest: "styles"
         }
       ],
     }),
