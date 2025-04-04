@@ -53,11 +53,11 @@
       "import": "./dist/animations.es.js",
       "require": "./dist/animations.cjs.js"
     },
-    "./styles/theme.css": {
+    "./theme.css": {
       "require": "./dist/styles/theme.css",
       "default": "./dist/styles/theme.css"
     },
-    "./styles/globals.css": {
+    "./globals.css": {
       "require": "./dist/styles.css",
       "default": "./dist/styles.css"
     },
