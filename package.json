@@ -57,10 +57,6 @@
       "require": "./dist/styles/theme.css",
       "default": "./dist/styles/theme.css"
     },
-    "./globals.css": {
-      "require": "./dist/styles/globals.css",
-      "default": "./dist/styles/globals.css"
-    },
     "./logos": {
       "types": "./dist/logos.d.ts",
       "import": "./dist/logos.es.js",

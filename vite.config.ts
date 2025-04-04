@@ -25,14 +25,14 @@ export default defineConfig({
           src: "src/assets/logos/*.{png,ico,webp,svg}",
           dest: "assets/logos",
         },
-        {
-          src: "src/styles/theme.css",
-          dest: "styles"
-        },
-        {
-          src: "src/styles/globals.css",
-          dest: "styles"
-        }
+        // {
+        //   src: "src/styles/theme.css",
+        //   dest: "styles"
+        // },
+        // {
+        //   src: "src/styles/globals.css",
+        //   dest: "styles"
+        // }
       ],
     }),
   ],
