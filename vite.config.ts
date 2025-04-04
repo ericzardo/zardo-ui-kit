@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
+import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import dts from "vite-plugin-dts";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -19,6 +20,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
     tailwindcss(),
+    cssInjectedByJsPlugin(),
     viteStaticCopy({
       targets: [
         {
