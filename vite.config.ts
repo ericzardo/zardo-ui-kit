@@ -28,6 +28,10 @@ export default defineConfig({
         {
           src: "src/styles/theme.css",
           dest: "styles"
+        },
+        {
+          src: "src/globals.css",
+          dest: "styles"
         }
       ],
     }),
@@ -62,12 +66,6 @@ export default defineConfig({
           "react-dom": "ReactDOM",
         },
         manualChunks: () => "bundle",
-        assetFileNames: (assetInfo) => {
-          if (assetInfo.name?.endsWith(".css")) {
-            return "styles.css";
-          }
-          return assetInfo.name;
-        },
       },
     },
   },
