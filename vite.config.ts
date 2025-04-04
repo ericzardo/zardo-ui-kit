@@ -20,7 +20,9 @@ export default defineConfig({
     }),
     tsconfigPaths(),
     tailwindcss(),
-    cssInjectedByJsPlugin(),
+    cssInjectedByJsPlugin({
+      relativeCSSInjection: true, 
+    }),    
     viteStaticCopy({
       targets: [
         {
