@@ -3,78 +3,36 @@ import { cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 
 const inputStyles = cva(
-  "w-full rounded-lg border focus:outline-none focus:border-brand-purple transition-colors placeholder:text-brand-navy/50 text-brand-navy border-brand-lavender/50",
+  "ui:w-full ui:rounded-lg ui:border ui:focus:outline-none ui:focus:border-brand-purple ui:transition-colors ui:placeholder:text-brand-navy/50 ui:text-brand-navy ui:border-brand-lavender/50",
   {
     variants: {
       variant: {
-        solid: "bg-white/70",
-        glass: "bg-white shadow-md backdrop-blur-sm",
+        solid: "ui:bg-white/70",
+        glass: "ui:bg-white ui:shadow-md ui:backdrop-blur-sm",
       },
       error: {
-        true: "border-red-500",
+        true: "ui:border-red-500",
         false: "",
       },
       size: {
-        sm: "text-sm px-3 py-2 placeholder:text-sm",
-        md: "px-4 py-3 placeholder:text-base",
-        lg: "text-lg px-6 py-3 placeholder:text-lg",
+        sm: "ui:text-sm ui:px-3 ui:py-2 ui:placeholder:text-sm",
+        md: "ui:px-4 ui:py-3 ui:placeholder:text-base",
+        lg: "ui:text-lg ui:px-6 ui:py-3 ui:placeholder:text-lg",
       },
     },
     compoundVariants: [
-      {
-        variant: "solid",
-        size: "sm",
-      },
-      {
-        variant: "solid",
-        size: "sm",
-        error: true,
-      },
-      {
-        variant: "glass",
-        size: "sm",
-      },
-      {
-        variant: "glass",
-        size: "sm",
-        error: true,
-      },
-      {
-        variant: "solid",
-        size: "md",
-      },
-      {
-        variant: "solid",
-        size: "md",
-        error: true,
-      },
-      {
-        variant: "glass",
-        size: "md",
-      },
-      {
-        variant: "glass",
-        size: "md",
-        error: true,
-      },
-      {
-        variant: "solid",
-        size: "lg",
-      },
-      {
-        variant: "solid",
-        size: "lg",
-        error: true,
-      },
-      {
-        variant: "glass",
-        size: "lg",
-      },
-      {
-        variant: "glass",
-        size: "lg",
-        error: true,
-      },
+      { variant: "solid", size: "sm" },
+      { variant: "solid", size: "sm", error: true },
+      { variant: "glass", size: "sm" },
+      { variant: "glass", size: "sm", error: true },
+      { variant: "solid", size: "md" },
+      { variant: "solid", size: "md", error: true },
+      { variant: "glass", size: "md" },
+      { variant: "glass", size: "md", error: true },
+      { variant: "solid", size: "lg" },
+      { variant: "solid", size: "lg", error: true },
+      { variant: "glass", size: "lg" },
+      { variant: "glass", size: "lg", error: true },
     ],
     defaultVariants: {
       variant: "solid",
@@ -84,16 +42,16 @@ const inputStyles = cva(
   }
 );
 
-const messageStyles = cva("font-medium", {
+const messageStyles = cva("ui:font-medium", {
   variants: {
     size: {
-      sm: "mt-0.5 text-[10px]",
-      md: "mt-1 text-xs",
-      lg: "mt-1 text-sm",
+      sm: "ui:mt-0.5 ui:text-[10px]",
+      md: "ui:mt-1 ui:text-xs",
+      lg: "ui:mt-1 ui:text-sm",
     },
     error: {
-      true: "text-red-500",
-      false: "text-brand-navy/50",
+      true: "ui:text-red-500",
+      false: "ui:text-brand-navy/50",
     },
   },
   defaultVariants: {
@@ -112,7 +70,7 @@ type InputProps = ComponentProps<"input"> & {
 export const Input = forwardRef<HTMLInputElement, InputProps>(
   ({ variant, size, error, message, className, ...props }, ref) => {
     return (
-      <div className="w-full">
+      <div className="ui:w-full">
         <input
           ref={ref}
           className={cn(inputStyles({ variant, size, error }), className)}

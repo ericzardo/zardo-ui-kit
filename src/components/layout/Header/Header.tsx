@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/components/Button";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface NavItem {
   label: string;
@@ -11,7 +11,7 @@ interface NavItem {
 }
 
 interface HeaderProps {
-  logo?: React.ReactNode;
+  logo?: ReactNode;
   navItems?: NavItem[];
   ctaLabel?: string;
   ctaOnClick?: () => void;
@@ -36,26 +36,26 @@ export const Header = ({
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`ui:fixed ui:top-0 ui:left-0 ui:right-0 ui:z-50 ui:transition-all ui:duration-300 ${
         isScrolled
-          ? "py-5 bg-gradient-to-b from-white/80 from-80% to-transparent"
-          : "py-7 bg-white shadow-sm"
+          ? "ui:py-5 ui:bg-gradient-to-b ui:from-white/80 ui:from-80% ui:to-transparent"
+          : "ui:py-7 ui:bg-white ui:shadow-sm"
       } ${className}`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between relative">
+      <div className="ui-container ui:mx-auto ui:px-4 ui:flex ui:items-center ui:justify-between ui:relative">
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold text-gradient">
+        <a href="/" className="ui:text-2xl ui:font-bold ui-text-gradient">
           {logo}
         </a>
 
         {/* Navigation Desktop */}
         {navItems.length > 0 && (
-          <nav className="hidden md:flex items-center gap-8 absolute left-1/2 transform -translate-x-1/2">
+          <nav className="ui:hidden ui:md:flex ui:items-center ui:gap-8 ui:absolute ui:left-1/2 ui:transform ui:-translate-x-1/2">
             {navItems.map(({ label, onClick }) => (
               <button
                 key={label}
                 onClick={onClick}
-                className="text-brand-navy font-medium hover:text-brand-purple transition-colors capitalize cursor-pointer"
+                className="ui:text-brand-navy ui:font-medium ui:hover:text-brand-purple ui:transition-colors ui:capitalize ui:cursor-pointer"
               >
                 {label}
               </button>
@@ -65,7 +65,7 @@ export const Header = ({
 
         {/* Action Button Desktop */}
         {ctaOnClick && (
-          <div className="hidden md:flex">
+          <div className="ui:hidden ui:md:flex">
             <Button variant="solid" size="sm" onClick={ctaOnClick}>
               {ctaLabel}
             </Button>
@@ -74,14 +74,14 @@ export const Header = ({
 
         {/* Mobile Menu Toggle */}
         <button
-          className="md:hidden focus:outline-none"
+          className="ui:md:hidden ui:focus:outline-none"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? (
-            <X className="w-6 h-6 text-brand-navy" />
+            <X className="ui:w-6 ui:h-6 ui:text-brand-navy" />
           ) : (
-            <Menu className="w-6 h-6 text-brand-navy" />
+            <Menu className="ui:w-6 ui:h-6 ui:text-brand-navy" />
           )}
         </button>
       </div>
@@ -89,16 +89,16 @@ export const Header = ({
       {/* Navigation Mobile */}
       {navItems.length > 0 && (
         <div
-          className={`fixed inset-0 top-[60px] z-40 bg-white/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center ${
-            isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+          className={`ui:fixed ui:inset-0 ui:top-[60px] ui:z-40 ui:bg-white/95 ui:backdrop-blur-lg ui:transform ui:transition-transform ui:duration-300 ui:ease-in-out ui:md:hidden ui:flex ui:flex-col ui:items-center ${
+            isMobileMenuOpen ? "ui:translate-x-0" : "ui:translate-x-full"
           }`}
         >
-          <div className="container mx-auto px-4 py-8 flex flex-col gap-6 items-center">
+          <div className="ui-container ui:mx-auto ui:px-4 ui:py-8 ui:flex ui:flex-col ui:gap-6 ui:items-center">
             {navItems.map(({ label, onClick }) => (
               <button
                 key={label}
                 onClick={onClick}
-                className="text-lg text-brand-navy py-3 border-b border-brand-lavender/50 font-medium capitalize w-full text-center"
+                className="ui:text-lg ui:text-brand-navy ui:py-3 ui:border-b ui:border-brand-lavender/50 ui:font-medium ui:capitalize ui:w-full ui:text-center"
               >
                 {label}
               </button>
@@ -107,7 +107,7 @@ export const Header = ({
               <Button
                 variant="solid"
                 size="sm"
-                className="mt-4"
+                className="ui:mt-4"
                 onClick={ctaOnClick}
               >
                 {ctaLabel}

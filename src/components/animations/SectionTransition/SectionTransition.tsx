@@ -24,13 +24,13 @@ export const SectionTransition: FC<SectionTransitionProps> = ({
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setTimeout(() => {
-              entry.target.classList.add("opacity-100");
+              entry.target.classList.add("ui:opacity-100");
               entry.target.classList.remove(
-                "translate-y-10",
-                "-translate-x-10",
-                "translate-x-10",
-                "scale-95",
-                "opacity-0"
+                "ui:translate-y-10",
+                "ui:-translate-x-10",
+                "ui:translate-x-10",
+                "ui:scale-95",
+                "ui:opacity-0"
               );
             }, delay);
             observer.unobserve(entry.target);
@@ -59,13 +59,13 @@ export const SectionTransition: FC<SectionTransitionProps> = ({
     <div
       ref={sectionRef}
       className={cn(
-        "opacity-0 transition-all duration-[700ms] ease-out will-change-transform",
-        direction === "up" && "translate-y-10",
-        direction === "down" && "-translate-y-10",
-        direction === "left" && "-translate-x-10",
-        direction === "right" && "translate-x-10",
-        direction === "scale" && "scale-95",
-        direction === "fade" && "opacity-0",
+        "ui:opacity-0 ui:transition-all ui:duration-[700ms] ui:ease-out ui:will-change-transform",
+        direction === "up" && "ui:translate-y-10",
+        direction === "down" && "ui:-translate-y-10",
+        direction === "left" && "ui:-translate-x-10",
+        direction === "right" && "ui:translate-x-10",
+        direction === "scale" && "ui:scale-95",
+        direction === "fade" && "ui:opacity-0",
         className
       )}
     >

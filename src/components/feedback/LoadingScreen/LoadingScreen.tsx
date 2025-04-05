@@ -11,7 +11,7 @@ export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
 
     useEffect(() => {
       const handleLoad = () => setIsLoading(false);
-  
+
       if (document.readyState === "complete") {
         handleLoad();
       } else {
@@ -19,21 +19,21 @@ export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
         return () => window.removeEventListener("load", handleLoad);
       }
     }, []);
-  
+
     if (!isLoading && !forceLoading) return null;
 
     return (
       <div
         ref={ref}
-        className="fixed inset-0 flex items-center justify-center bg-brand-navy z-[9999]"
+        className="ui:fixed ui:inset-0 ui:flex ui:items-center ui:justify-center ui:bg-brand-navy ui:z-[9999]"
       >
-        <div className="flex flex-col items-center">
-          <div className="relative">
-            <div className="w-16 h-16 border-4 border-brand-lavender/30 rounded-full"></div>
-            <div className="w-16 h-16 border-4 border-brand-lavender border-t-transparent rounded-full animate-spin absolute top-0 left-0"></div>
+        <div className="ui:flex ui:flex-col ui:items-center">
+          <div className="ui:relative">
+            <div className="ui:w-16 ui:h-16 ui:border-4 ui:border-brand-lavender/30 ui:rounded-full"></div>
+            <div className="ui:w-16 ui:h-16 ui:border-4 ui:border-brand-lavender ui:border-t-transparent ui:rounded-full ui:animate-spin ui:absolute ui:top-0 ui:left-0"></div>
           </div>
           {message && (
-            <p className="mt-6 text-brand-lavender font-medium text-lg">
+            <p className="ui:mt-6 ui:text-brand-lavender ui:font-medium ui:text-lg">
               {message}
             </p>
           )}

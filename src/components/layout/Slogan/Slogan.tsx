@@ -4,21 +4,22 @@ import { cva } from "class-variance-authority";
 
 const sloganStyles = cva(
   [
-    "relative",
-    "py-12",
-    "md:py-16",
-    "w-full",
-    "flex",
-    "items-center",
-    "bg-brand-navy",
-    "text-brand-lavender",
+    "ui:relative",
+    "ui:py-12",
+    "ui:md:py-16",
+    "ui:w-full",
+    "ui:flex",
+    "ui:items-center",
+    "ui:bg-brand-navy",
+    "ui:text-brand-lavender",
   ],
   {
     variants: {
       borderRadius: {
-        top: "rounded-t-[20px] md:rounded-t-[40px] lg:rounded-t-[60px]",
-        bottom: "rounded-b-[20px] md:rounded-b-[40px] lg:rounded-b-[60px]",
-        none: "rounded-none",
+        top: "ui:rounded-t-[20px] ui:md:rounded-t-[40px] ui:lg:rounded-t-[60px]",
+        bottom:
+          "ui:rounded-b-[20px] ui:md:rounded-b-[40px] ui:lg:rounded-b-[60px]",
+        none: "ui:rounded-none",
       },
     },
     defaultVariants: {
@@ -42,14 +43,16 @@ export const Slogan = ({
 }: SloganProps) => {
   return (
     <section className={cn(sloganStyles({ borderRadius }))}>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="ui-container ui:mx-auto ui:px-4 ui:relative ui:z-10">
         <SectionTransition direction={transitionDirection}>
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <div className="ui:max-w-4xl ui:mx-auto ui:text-center">
+            <h2 className="ui:text-4xl ui:md:text-5xl ui:lg:text-6xl ui:font-bold ui:mb-6">
               {title}
             </h2>
-            <div className="w-full px-1 md:px-16 lg:px-20">
-              <p className="text-lg md:text-xl text-white/70">{description}</p>
+            <div className="ui:w-full ui:px-1 ui:md:px-16 ui:lg:px-20">
+              <p className="ui:text-lg ui:md:text-xl ui:text-white/70">
+                {description}
+              </p>
             </div>
           </div>
         </SectionTransition>

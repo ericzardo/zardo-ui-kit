@@ -15,18 +15,18 @@ type FooterProps = {
 
 export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
   return (
-    <footer className="relative py-12 bg-brand-navy text-white w-full">
-      <div className="container mx-auto px-4">
-        <div className="flex md:!flex-row flex-col gap-5 justify-between items-center">
+    <footer className="ui:relative ui:py-12 ui:bg-brand-navy ui:text-white ui:w-full">
+      <div className="ui-container ui:mx-auto ui:px-4">
+        <div className="ui:flex ui:md:flex-row ui:flex-col ui:gap-5 ui:justify-between ui:items-center">
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="ui:flex ui:items-center ui:gap-4">
             {socialLinks.map((socialLink, index) => (
               <a
                 key={index}
                 href={socialLink.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center text-white/60 hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
+                className="ui:flex ui:items-center ui:justify-center ui:text-white/60 ui:hover:scale-90 ui:hover:text-white/80 ui:transition-all ui:duration-200 ui:ease-out"
                 aria-label={socialLink.label}
               >
                 {socialLink.icon}
@@ -37,26 +37,26 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
               href={`mailto:${email}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center text-white/60 hover:scale-90 hover:text-white/80 transition-all duration-200 ease-out"
+              className="ui:flex ui:items-center ui:justify-center ui:text-white/60 ui:hover:scale-90 ui:hover:text-white/80 ui:transition-all ui:duration-200 ui:ease-out"
               aria-label={`Send an email to ${email}`}
               title={`Send email to ${email}`}
             >
-              <Mail strokeWidth={2} className="size-6 text-white/60" />
+              <Mail strokeWidth={2} className="ui:size-6" />
             </a>
           </div>
 
           {/* Copyright */}
-          <p className="relative sm:absolute sm:left-1/2 sm:-translate-x-1/2 text-white/70">
+          <p className="ui:relative sm:ui:absolute sm:ui:left-1/2 sm:ui:-translate-x-1/2 ui:text-white/70">
             2025 © zardo. All rights reserved.
           </p>
 
           {/* Scroll to Top */}
           <button
             onClick={onScrollToTop}
-            className="text-white/70 flex gap-2 items-center transition-all cursor-pointer hover:scale-90 hover:text-white/80 duration-200 ease-out group"
+            className="ui:text-white/70 ui:flex ui:gap-2 ui:items-center ui:transition-all ui:cursor-pointer ui:hover:scale-90 ui:hover:text-white/80 ui:duration-200 ui:ease-out ui:group"
             aria-label="Back to top"
           >
-            <ChevronDown className="transition-transform duration-300 group-hover:rotate-180" />
+            <ChevronDown className="ui:transition-transform ui:duration-300 group-ui:hover:rotate-180" />
             Back to Top
           </button>
         </div>
