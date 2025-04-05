@@ -2,7 +2,6 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import { defineConfig } from "vite";
-import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js';
 import dts from "vite-plugin-dts";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -19,10 +18,7 @@ export default defineConfig({
       copyDtsFiles: true,
     }),
     tsconfigPaths(),
-    tailwindcss(),
-    cssInjectedByJsPlugin({
-      relativeCSSInjection: true, 
-    }),    
+    tailwindcss(),  
     viteStaticCopy({
       targets: [
         {
@@ -42,6 +38,7 @@ export default defineConfig({
   ],
   build: {
     assetsDir: "assets",
+    cssCodeSplit: false,
     lib: {
       entry: {
         index: path.resolve(__dirname, "src/index.ts"),

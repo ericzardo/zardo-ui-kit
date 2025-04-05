@@ -57,6 +57,10 @@
       "require": "./dist/styles/theme.css",
       "default": "./dist/styles/theme.css"
     },
+    "./styles.css": {
+      "require": "./dist/styles/globals.css",
+      "default": "./dist/styles/globals.css"
+    },
     "./logos": {
       "types": "./dist/logos.d.ts",
       "import": "./dist/logos.es.js",
@@ -78,7 +82,8 @@
   },
   "peerDependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.1.0"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3",
@@ -111,19 +116,15 @@
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0",
-    "vite-plugin-css-injected-by-js": "^3.5.2",
     "vite-plugin-dts": "^4.5.3",
     "vite-plugin-static-copy": "^2.3.0",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.0.9"
+    "vitest": "^3.0.9",
+    "@tailwindcss/vite": "^4.1.0"
   },
   "eslintConfig": {
     "extends": [
       "plugin:storybook/recommended"
     ]
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.0",
-    "tailwindcss": "^4.1.0"
   }
 }
