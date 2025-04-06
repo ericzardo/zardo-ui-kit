@@ -1,14 +1,14 @@
 import { cn } from "@/utils";
 
-interface PatternBackgroundBlobsProps {
+interface PatternBackgroundProps {
   variant?: "two-blobs" | "three-blobs" | "corner-blobs";
   className?: string;
 }
 
-export const PatternBackgroundBlobs = ({
+export const PatternBackground = ({
   variant = "two-blobs",
   className,
-}: PatternBackgroundBlobsProps) => {
+}: PatternBackgroundProps) => {
   return (
     <div className={cn("ui:absolute ui:inset-0 ui:-z-10", className)}>
       {variant === "two-blobs" && (

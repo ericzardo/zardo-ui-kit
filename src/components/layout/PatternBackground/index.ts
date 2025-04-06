@@ -1,1 +1,1 @@
-export { PatternBackgroundBlobs } from "./PatternBackground";
+export { PatternBackground } from "./PatternBackground";

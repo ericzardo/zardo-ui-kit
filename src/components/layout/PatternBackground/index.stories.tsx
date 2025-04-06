@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { PatternBackgroundBlobs } from ".";
+import { PatternBackground } from ".";
 
-const meta: Meta<typeof PatternBackgroundBlobs> = {
+const meta: Meta<typeof PatternBackground> = {
   title: "Layout/PatternBackground",
-  component: PatternBackgroundBlobs,
+  component: PatternBackground,
   parameters: {
     layout: "fullscreen",
   },
@@ -11,7 +11,7 @@ const meta: Meta<typeof PatternBackgroundBlobs> = {
 
 export default meta;
 
-type Story = StoryObj<typeof PatternBackgroundBlobs>;
+type Story = StoryObj<typeof PatternBackground>;
 
 export const TwoBlobs: Story = {
   args: {
