@@ -6,7 +6,7 @@ type LoadingScreenProps = {
 };
 
 export const LoadingScreen = forwardRef<HTMLDivElement, LoadingScreenProps>(
-  ({ message = "Loading...", forceLoading = false }, ref) => {
+  ({ message, forceLoading = false }, ref) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

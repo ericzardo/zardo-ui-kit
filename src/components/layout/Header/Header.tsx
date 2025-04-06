@@ -97,7 +97,10 @@ export const Header = ({
             {navItems.map(({ label, onClick }) => (
               <button
                 key={label}
-                onClick={onClick}
+                onClick={() => {
+                  onClick?.();
+                  setIsMobileMenuOpen(false);
+                }}
                 className="ui:text-lg ui:text-brand-navy ui:py-3 ui:border-b ui:border-brand-lavender/50 ui:font-medium ui:capitalize ui:w-full ui:text-center"
               >
                 {label}

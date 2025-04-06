@@ -44,7 +44,7 @@ To get started with the Zardo UI Library, follow these simple steps:
 Here's an overview of the components available in the Zardo UI Library:
 
 <details>
-<summary><h3>Basic Components</h3></summary>
+<summary><h4>Basic Components</h4></summary>
 
 - **Button**: A versatile button component with various styles and sizes.
 - **Input**: A customizable input field for capturing user data.
@@ -52,7 +52,7 @@ Here's an overview of the components available in the Zardo UI Library:
 </details>
 
 <details>
-<summary><h3>Layout Components</h3></summary>
+<summary><h4>Layout Components</h4></summary>
 
 - **Header**: A component for the top navigation or branding.
 - **Footer**: A component for the bottom of your application.
@@ -61,7 +61,7 @@ Here's an overview of the components available in the Zardo UI Library:
 </details>
 
 <details>
-<summary><h3>Transition Components</h3></summary>
+<summary><h4>Transition Components</h4></summary>
 
 - **Section Transition**: A component for smooth transitions between sections.
 - **Loading Screen**: A component to indicate loading states in your application.

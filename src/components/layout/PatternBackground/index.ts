@@ -1,0 +1,1 @@
+export { PatternBackgroundBlobs } from "./PatternBackground";
