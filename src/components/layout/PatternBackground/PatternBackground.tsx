@@ -10,7 +10,7 @@ export const PatternBackground = ({
   className,
 }: PatternBackgroundProps) => {
   return (
-    <div className={cn("ui:absolute ui:inset-0 ui:-z-10", className)}>
+    <div className={cn("ui:absolute ui:inset-0", className)}>
       {variant === "two-blobs" && (
         <>
           <div className="ui:absolute ui:top-1/4 ui:-left-10 ui:w-64 ui:h-64 ui:bg-brand-purple/10 ui:rounded-full ui:blur-3xl" />
