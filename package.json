@@ -76,7 +76,7 @@
     "build:css": "npx @tailwindcss/cli -m -i ./src/styles/globals.css -o ./dist/styles/globals.css",
     "preview": "vite preview",
     "storybook": "storybook dev -p 3333",
-    "build-storybook": "storybook build",
+    "build-storybook": "storybook build -o storybook-static",
     "prepublishOnly": "npm run build",
     "prebuild": "rm -rf dist tsconfig.tsbuildinfo tsconfig.node.tsbuildinfo vite.config.js"
   },
