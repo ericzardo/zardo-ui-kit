@@ -25,4 +25,8 @@
     @apply ui:bg-gradient-to-r ui:from-brand-purpleDark ui:via-brand-purple ui:to-brand-purpleDeep ui:bg-clip-text ui:text-transparent;
     will-change: background-position;
   }
+
+  .ui-section-heading {
+    @apply ui:text-3xl ui:md:text-4xl ui:lg:text-5xl ui:font-bold ui:mb-6 ui:md:mb-8 ui:leading-none;
+  }
 }
