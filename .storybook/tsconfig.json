@@ -1,11 +1,11 @@
 {
-  "extends": "../tsconfig.json", // Extende o tsconfig principal
+  "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["node"], // Adicione tipos necessários
-    "baseUrl": ".", // Certifique-se de que o baseUrl está correto
+    "types": ["node"],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"] // Mantenha os aliases que você configurou
-    }
+      "@/*": ["src/*"]
+    },
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
 }
