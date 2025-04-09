@@ -15,7 +15,9 @@ interface HeaderProps {
   navItems?: NavItem[];
   ctaLabel?: string;
   ctaOnClick?: () => void;
+  logoHref?: string;
   className?: string;
+  onLogoClick?: () => void; // ← nova prop adicionada
 }
 
 export const Header = ({
@@ -23,7 +25,9 @@ export const Header = ({
   navItems = [],
   ctaLabel = "Get Started",
   ctaOnClick,
+  logoHref = "/",
   className,
+  onLogoClick, // ← recebida aqui
 }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -44,9 +48,12 @@ export const Header = ({
     >
       <div className="ui-container ui:mx-auto ui:px-4 ui:flex ui:items-center ui:justify-between ui:relative">
         {/* Logo */}
-        <a href="/" className="ui:text-2xl ui:font-bold ui-text-gradient">
+        <div
+          onClick={onLogoClick || (() => (window.location.href = logoHref))}
+          className="ui:text-2xl ui:font-bold ui-text-gradient ui:cursor-pointer"
+        >
           {logo}
-        </a>
+        </div>
 
         {/* Navigation Desktop */}
         {navItems.length > 0 && (
