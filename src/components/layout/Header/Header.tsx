@@ -3,6 +3,7 @@
 import { Button } from "@/components/components/Button";
 import { Menu, X } from "lucide-react";
 import { ReactNode, useEffect, useState } from "react";
+import { Selector } from "./Selector";
 
 interface NavItem {
   label: string;
@@ -17,7 +18,12 @@ interface HeaderProps {
   ctaOnClick?: () => void;
   logoHref?: string;
   className?: string;
-  onLogoClick?: () => void; // ← nova prop adicionada
+  onLogoClick?: () => void;
+  selector?: {
+    options: { value: string; label: string; icon?: string }[];
+    current: string;
+    onSelect: (value: string) => void;
+  };  
 }
 
 export const Header = ({
@@ -27,7 +33,8 @@ export const Header = ({
   ctaOnClick,
   logoHref = "/",
   className,
-  onLogoClick, // ← recebida aqui
+  onLogoClick,
+  selector,
 }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -71,13 +78,20 @@ export const Header = ({
         )}
 
         {/* Action Button Desktop */}
-        {ctaOnClick && (
-          <div className="ui:hidden ui:md:flex">
+        <div className="ui:hidden ui:md:flex ui:gap-2 ui:md:gap-4 ui:items-center ui:justify-center">
+          {selector && (
+            <Selector
+              options={selector.options}
+              current={selector.current}
+              onSelect={selector.onSelect}
+            />     
+          )}
+          {ctaOnClick && (
             <Button variant="solid" size="sm" onClick={ctaOnClick}>
               {ctaLabel}
             </Button>
-          </div>
-        )}
+          )}
+        </div>
 
         {/* Mobile Menu Toggle */}
         <button
@@ -113,6 +127,18 @@ export const Header = ({
                 {label}
               </button>
             ))}
+
+            {selector && (
+              <Selector
+                options={selector.options}
+                current={selector.current}
+                onSelect={(val) => {
+                  selector.onSelect(val);
+                  setIsMobileMenuOpen(false);
+                }}
+              />
+            )}
+
             {ctaOnClick && (
               <Button
                 variant="solid"
