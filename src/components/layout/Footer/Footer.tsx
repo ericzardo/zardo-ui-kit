@@ -11,9 +11,15 @@ type FooterProps = {
   onScrollToTop: () => void;
   email: string;
   socialLinks: SocialLink[];
+  backToTopLabel: string;
 };
 
-export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
+export const Footer = ({
+  onScrollToTop,
+  email,
+  socialLinks,
+  backToTopLabel,
+}: FooterProps) => {
   return (
     <footer className="ui:relative ui:py-12 ui:bg-brand-navy ui:text-white ui:w-full">
       <div className="ui-container ui:mx-auto ui:px-4">
@@ -56,8 +62,8 @@ export const Footer = ({ onScrollToTop, email, socialLinks }: FooterProps) => {
             className="ui:text-white/70 ui:flex ui:gap-2 ui:items-center ui:transition-all ui:cursor-pointer ui:hover:scale-90 ui:hover:text-white/80 ui:duration-200 ui:ease-out ui:group"
             aria-label="Back to top"
           >
-            <ChevronDown className="ui:transition-transform ui:duration-300 group-ui:hover:rotate-180" />
-            Back to Top
+            <ChevronDown className="ui:group-hover:rotate-180 ui:transition-transform ui:duration-300 ui:rotate-180 ui:mdrotate-0" />
+            {backToTopLabel}
           </button>
         </div>
       </div>

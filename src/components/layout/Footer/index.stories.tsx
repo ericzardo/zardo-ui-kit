@@ -34,6 +34,7 @@ export const Desktop: Story = {
         url: "#",
       },
     ],
+    backToTopLabel: "Back to top",
   },
   parameters: {
     viewport: {
@@ -58,6 +59,7 @@ export const Mobile: Story = {
         url: "#",
       },
     ],
+    backToTopLabel: "Back to top",
   },
   parameters: {
     viewport: {
